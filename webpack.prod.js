@@ -10,5 +10,18 @@ module.exports = {
   output: {
     filename: 'webcomp-boilerplate.min.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext][query]',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(svg|png|jpe?g|gif|webp)$/i,
+        type: 'asset/resource',
+      },
+    ],
   },
 };

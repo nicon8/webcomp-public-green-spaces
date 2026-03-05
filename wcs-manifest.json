@@ -1,10 +1,10 @@
 {
-  "title": "Hello-world",
-  "shortName": "hello-world-2",
-  "description": "Hello world simple webcomp example",
-  "descriptionAbstract": "Hello world simple webcomp example",
+  "title": "Public green spaces",
+  "shortName": "public-green-spaces",
+  "description": "A web component that displays a city’s public green asset inventory, including trees, parks, and other urban green infrastructure. It provides a clear, interactive view of public assets related to green space management",
+  "descriptionAbstract": "An interactive web component for visualizing and exploring a city's public green asset inventory, supporting efficient management, monitoring, and planning of urban green infrastructure.",
   "license": "AGPL-3.0-or-later",
-  "repositoryUrl": "https://your-repository.git",
+  "repositoryUrl": "https://github.com/noi-techpark/webcomp-public-green-spaces.git",
   "copyrightHolders": [
     {
       "name": "NOI",
@@ -15,10 +15,16 @@
   ],
   "authors": [
     {
-      "name": "...",
-      "email": "...",
-      "organization": "...",
-      "organizationUrl": "..."
+      "name": "Samuel Yohanna",
+      "email": "samuel.yohanna@r3gis.com",
+      "organization": "R3Gis",
+      "organizationUrl": "https://r3gis.com"
+    },
+    {
+      "name": "Nicola Manica",
+      "email": "nicola.manica@r3gis.com",
+      "organization": "R3Gis",
+      "organizationUrl": "https://r3gis.com"
     }
   ],
   "image": "wcs-logo.png",
@@ -32,17 +38,91 @@
     ]
   },
   "configuration": {
-    "tagName": "hello-world",
+    "tagName": "",
     "options": [
       {
-        "key": "title",
+        "key": "pmtiles-url",
         "type": "text",
-        "label": "title of the web-comp",
+        "label": "url of the pmtiles which contains objects",
         "required": false,
         "options": {
-          "default": "hello-world"
+          "default": ""
+        }
+      },
+      {
+        "key": "zoom",
+        "type": "number",
+        "required": false,
+        "label": "Initial zoom",
+        "options": {
+          "default": 13
+        }
+      },
+      {
+        "key": "lat",
+        "type": "number",
+        "required": false,
+        "label": "Initial latitude",
+        "options": {
+          "default": 45.4064
+        }
+      },
+      {
+        "key": "lng",
+        "type": "number",
+        "required": false,
+        "label": "Initial longitude",
+        "options": {
+          "default": 11.8768
+        }
+      },
+      {
+        "key": "city",
+        "type": "text",
+        "required": false,
+        "label": "City name (OpenStreetMap geocoding)",
+        "options": {
+          "default": ""
+        }
+      },
+      {
+        "key": "country",
+        "type": "text",
+        "required": false,
+        "label": "Country / region (optional, for city disambiguation)",
+        "options": {
+          "default": ""
+        }
+      },
+      {
+        "key": "layers",
+        "type": "multiselect",
+        "required": false,
+        "label": "Layers da mostrare",
+        "options": {
+          "values": [
+            "1:all",
+            "1:trees",
+            "1:hedges",
+            "1:lawns",
+            "1:flowerbeds",
+            "2:all",
+            "2:street",
+            "2:boundaries",
+            "2:ground",
+            "2:utilities",
+            "2:structures",
+            "3:all",
+            "3:boundary",
+            "3:playground",
+            "3:temporary"
+          ],
+          "default": [
+            "1:all"
+          ]
         }
       }
+
     ]
   }
 }
