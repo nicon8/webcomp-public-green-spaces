@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import logoUrl from "./open-data-hub-icons/Logo_RBG/OpenDataHub_Logo_BK-RGB.svg";
 import navBtnUrl from "./open-data-hub-icons/btn-navigation.svg";
 import lawnUrl from "./open-data-hub-icons/lawn.svg";
