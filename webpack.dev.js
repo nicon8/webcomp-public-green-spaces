@@ -9,10 +9,23 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'webcomp-boilerplate.js',
+    assetModuleFilename: 'assets/[name][ext][query]',
     clean: true
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(svg|png|jpe?g|gif|webp)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
   devServer: {
-    static: './public',
+    static: path.resolve(__dirname, 'public'),
     port: 8998,
     hot: true
   },
