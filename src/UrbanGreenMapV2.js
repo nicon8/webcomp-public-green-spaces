@@ -279,6 +279,7 @@ class UrbanGreenMapV2 extends HTMLElement {
     this.map?.remove();
   }
 
+  // Data origin: Open Data Hub (https://opendatahub.com) — UrbanGreen dataset.
   get apiBase() {
     return this.getAttribute("api-base") || "https://api.tourism.testingmachine.eu";
   }
