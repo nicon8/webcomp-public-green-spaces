@@ -119,9 +119,7 @@
             "3:playground",
             "3:temporary"
           ],
-          "default": [
-            "1:all"
-          ]
+          "default": "1:all"
         }
       }
 

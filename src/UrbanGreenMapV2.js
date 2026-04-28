@@ -1,3 +1,8 @@
+
+// SPDX-FileCopyrightText: NOI Techpark <digital@noi.bz.it>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 import { ViewportDataLoader } from "./ViewportDataLoader.js";
 import { getGreenSpaceInfo } from "./GreenSpaceDictionary.js";
 import { iconUrlMap, navBtnUrl } from "./iconAssets.js";
@@ -257,6 +262,7 @@ class UrbanGreenMapV2 extends HTMLElement {
     this.map?.remove();
   }
 
+  // Data origin: Open Data Hub (https://opendatahub.com) — UrbanGreen dataset.
   get apiBase() {
     return this.getAttribute("api-base") || "https://api.tourism.testingmachine.eu";
   }
